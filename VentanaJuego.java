@@ -9,6 +9,7 @@
 import javax.swing.JFrame;
 public class VentanaJuego extends JFrame
 {
+    private PanelJuego panel;
     public VentanaJuego(Juego juego)
     {
         setTitle("Dinosaurio Concurrente");
@@ -21,9 +22,15 @@ public class VentanaJuego extends JFrame
 
         setResizable(false);
 
-        add(new PanelJuego(juego));
+        //add(new PanelJuego(juego));
+        panel = new PanelJuego(juego);
+
+        add(panel);
 
         setVisible(true);
     }
-
+    public PanelJuego getPanel()
+    {
+        return panel;
+    }
 }
