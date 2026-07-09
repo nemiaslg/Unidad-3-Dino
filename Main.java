@@ -15,11 +15,26 @@ public class Main
     }*/
     public static void main(String[] args)
     {
-        Juego juego = new Juego();
+        /*Juego juego = new Juego();
 
         VentanaJuego ventana = new VentanaJuego(juego);
         HiloCampo campo = new HiloCampo(juego, ventana.getPanel());
-
+        HiloDinosaurio dinosaurio = new HiloDinosaurio(juego, ventana.getPanel());campo.start();
         campo.start();
+        dinosaurio.start();
+        */
+       Juego juego = new Juego();
+
+       VentanaJuego ventana = new VentanaJuego(juego);
+
+       HiloCampo campo = new HiloCampo(juego, ventana.getPanel());
+
+       HiloDinosaurio dinosaurio = new HiloDinosaurio(juego, ventana.getPanel());
+       HiloContador contador = new HiloContador(juego, ventana.getPanel());
+       campo.start();
+
+       dinosaurio.start();
+       
+       contador.start();
     }
 }

@@ -27,6 +27,11 @@ public class HiloCampo extends Thread
             juego.setCactusX(800);
         }
 
+        if(juego.hayColision())
+        {
+            juego.setGameOver(true);
+        }
+        
         panel.repaint();
 
         try

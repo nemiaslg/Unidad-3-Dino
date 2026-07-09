@@ -43,6 +43,20 @@ public class Juego
 
         saltando = false;
     }
+    
+    public boolean hayColision()
+    {
+        int anchoDino = 30;
+        int altoDino = 30;
+
+        int anchoCactus = 20;
+        int altoCactus = 30;
+
+        return dinoX < cactusX + anchoCactus &&
+           dinoX + anchoDino > cactusX &&
+           dinoY < cactusY + altoCactus &&
+           dinoY + altoDino > cactusY;
+    }
 
     // Getters y setters
     public int getDinoX()

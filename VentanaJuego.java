@@ -28,6 +28,7 @@ public class VentanaJuego extends JFrame
         add(panel);
 
         setVisible(true);
+        panel.requestFocusInWindow();
     }
     public PanelJuego getPanel()
     {
