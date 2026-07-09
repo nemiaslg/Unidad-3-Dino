@@ -18,5 +18,8 @@ public class Main
         Juego juego = new Juego();
 
         VentanaJuego ventana = new VentanaJuego(juego);
+        HiloCampo campo = new HiloCampo(juego, ventana.getPanel());
+
+        campo.start();
     }
 }
