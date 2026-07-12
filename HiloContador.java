@@ -22,7 +22,9 @@ public class HiloContador extends Thread
         while(!juego.isGameOver())
         {
             juego.setPuntos(juego.getPuntos() + 1);
-
+            if(juego.getPuntos() % 200 == 0){
+               juego.setVelocidad(juego.getVelocidad() + 1);
+            }
             panel.repaint();
 
             try

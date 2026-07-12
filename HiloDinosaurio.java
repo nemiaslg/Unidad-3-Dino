@@ -24,7 +24,7 @@ public class HiloDinosaurio extends Thread
             if(juego.isSaltando())
             {
                 // Subir
-                while(juego.getDinoY() > 170)
+                while(juego.getDinoY() > 130)
                 {
                     juego.setDinoY(juego.getDinoY() - 5);
 

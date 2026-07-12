@@ -7,12 +7,13 @@
  */
 
 import javax.swing.JFrame;
+import java.awt.BorderLayout;
 public class VentanaJuego extends JFrame
 {
     private PanelJuego panel;
     public VentanaJuego(Juego juego)
     {
-        setTitle("Dinosaurio Concurrente");
+        setTitle("Dinosaurio jsjsj");
 
         setSize(800, 350);
 
@@ -22,12 +23,15 @@ public class VentanaJuego extends JFrame
 
         setResizable(false);
 
+        setLayout(new BorderLayout());
         //add(new PanelJuego(juego));
         panel = new PanelJuego(juego);
 
-        add(panel);
+        //add(panel);
+        add(panel, BorderLayout.CENTER);
 
         setVisible(true);
+        panel.requestFocus(); ///extra
         panel.requestFocusInWindow();
     }
     public PanelJuego getPanel()

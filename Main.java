@@ -7,22 +7,9 @@
  */
 public class Main
 {
-    /*public static void main(String[] args)
+    
+    public static void iniciarJuego()
     {
-        Juego juego = new Juego();
-
-        new VentanaJuego(juego);
-    }*/
-    public static void main(String[] args)
-    {
-        /*Juego juego = new Juego();
-
-        VentanaJuego ventana = new VentanaJuego(juego);
-        HiloCampo campo = new HiloCampo(juego, ventana.getPanel());
-        HiloDinosaurio dinosaurio = new HiloDinosaurio(juego, ventana.getPanel());campo.start();
-        campo.start();
-        dinosaurio.start();
-        */
        Juego juego = new Juego();
 
        VentanaJuego ventana = new VentanaJuego(juego);
@@ -36,5 +23,8 @@ public class Main
        dinosaurio.start();
        
        contador.start();
+    }
+    public static void main(String [] args){
+        iniciarJuego();
     }
 }
